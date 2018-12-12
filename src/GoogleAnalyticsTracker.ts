@@ -116,6 +116,15 @@ class GoogleAnalyticsTracker {
   }
 
   /**
+   * Track the campaign from url
+   * @param  {String} urlString The url of the deep link
+   * @param  {String} screenName The name of the current screen
+   */
+  trackCampaignFromUrl(urlString: string, screenName: string) {
+    AnalyticsBridge.trackCampaignFromUrl(this.id, urlString, screenName);
+  }
+
+  /**
    * Track an event that has occured
    * @example
    * tracker.trackEvent("DetailsButton", "Click");

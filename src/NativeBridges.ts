@@ -31,6 +31,11 @@ export interface IGoogleAnalyticsBridge {
     value: string,
     payload: HitPayload
   ): void;
+  trackCampaignFromUrl(
+    trackerId: string,
+    urlString: string, 
+    screenName: string
+  ): void;
   trackTiming(
     trackerId: string,
     category: string,
